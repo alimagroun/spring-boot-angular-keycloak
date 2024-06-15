@@ -1,0 +1,28 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>App</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button [matMenuTriggerFor]="menu1" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu1="matMenu" class="mat-menu-panel">
+      <button mat-menu-item type="submit" (click)="goToAccountManagement()" >
+        <mat-icon>account_circle</mat-icon>
+        <span>Account Management</span>
+      </button>
+      <button mat-menu-item type="submit" (click)="logout()">
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Log Out</span>
+      </button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>
+<div>
+  <p>{{ message }}</p>
+</div>
+
+
+
+
+
+
